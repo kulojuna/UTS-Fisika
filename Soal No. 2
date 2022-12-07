@@ -1,0 +1,42 @@
+program Fisika_2;
+const 
+  c1 = 5;
+  c2 = 60;
+  c3 = 20;
+  c4 = 6;
+  c5 = 20;
+  v  = 15;
+
+var 
+ cp1, cp2, cp3, cpt, Q:real;
+begin 
+  writeln('==== Diketahui ====');
+  writeln('Kapasitor 1 = ', c1);
+  writeln('Kapasitor 2 = ', c2);
+  writeln('Kapasitor 3 = ', c3);
+  writeln('Kapasitor 4 = ', c4);
+  writeln('Kapasitor 5 = ', c5);
+
+  {Rumus};
+  cp1 := c4 + c5;
+  cp2 := (c1*c3)/(c1+c3);
+  cp3 := cp1 + cp2;
+  cpt := (cp3*c2)/(cp3+c2);
+
+  writeln('a. Kapasitor pengganti');
+  writeln('=========================');
+  writeln('Kapasitor Pengganti 1 = ', cp1:1:0);
+  writeln('Kapasitor Pengganti 2 = ', cp2:1:0);
+  writeln('Kapasitor Pengganti 3 = ', cp3:1:0);
+  writeln('Kapasitor Pengganti Total = ', cpt:1:0);
+
+  writeln('b. Bila dialiri tegangan 15v');
+  writeln('=========================');
+
+  {rumus}
+  Q := cpt * 0.001 * v;
+
+  writeln('Muatan (Q) = ', Q:1:1);
+
+  readln;
+  end.
