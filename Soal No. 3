@@ -1,0 +1,14 @@
+program Fisika_3;
+const
+  v = 110;
+  i = 2.8;
+var 
+r:real;
+begin
+  writeln('Hambatan pada toaster');
+  
+  {rumus}
+  r:= v/i;
+  writeln('hambatan = ', r:4:2, ' ohm');
+  readln;
+  end.
