@@ -1,0 +1,50 @@
+Program Fisika_1;
+const
+r1=3;
+r2=6;
+r3=1;
+r4=1;
+v=15;
+
+var
+ rs1, rp1,  rp_bagi, rt, i, ir1,ir2, isr: real;
+ 
+begin
+  writeln('= Diketahui ==========');
+  writeln('Resistor (R) 1 = ',r1);
+  writeln('Resistor (R) 2 = ',r2);
+  writeln('Resistor (R) 3 = ',r3);
+  writeln('Resistor (R) 4 = ',r4);
+  
+  writeln('a. Resistor (R) Pengganti');
+  writeln('=========================');
+  
+  {rumus}
+  rs1 := r3 + r4;
+  rp1 := (r1*r2)/(r1+r2);
+  rt := (rs1*rp1)/(rs1+rp1);
+  
+  writeln('Resistor Pengganti 1 = ',rs1:1:0,' ohm');
+  writeln('Resistor Pengganti 2 = ',rp1:1:0,' ohm');
+  writeln('Resistor Pengganti Total = ',rt:1:0,' ohm');
+  
+  writeln('b. Arus (I) Yang Keluar dari Sumber Tegangan');
+  writeln('=========================');
+  {rumus}
+  i := v/rt;
+  
+  writeln('i = ', i:1:0, ' Ampere');
+  
+    writeln('c. Arus (I) yang Melewati Masing" Resistor');
+    writeln('=========================');
+    {rumus}
+  ir1 := v/r1;
+  ir2 := v/r2;
+  isr := v/rs1;
+  
+    writeln('Arus Pada Resistor 1 = ',ir1:1:0, ' Ampere');
+    writeln('Arus Pada Resistor 2 = ',ir2:1:2, ' Ampere');
+    writeln('Arus Pada Resistor seri = ',isr:1:2, ' Ampere');
+    readln;
+
+end.
