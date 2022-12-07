@@ -1,0 +1,39 @@
+program Fisika_4;
+const
+  v = 110;
+  i = 5.5;
+  persen = 0.1;
+var 
+r, v4, v6, i4, r3, r4, i5:real;
+begin
+  writeln('==== Diketahui ====');
+  writeln('v = ', v);
+  writeln('I = ', i);
+
+  writeln('=== Total hambatan (R) ===');
+  {rumus}
+  r:= v/i;
+  writeln('Hambatan = ', r:3:0, ' ohm');
+
+  writeln('==== a. Tegangan turun 10% ====');
+  {rumus - arus}
+  v4 := v*persen;
+  v6 := v-v4;
+  i4 := v6/r;
+  
+  writeln('Penurunan tegangan 10% = ', v4:1:0, ' volt');
+  writeln('Tegangan Sekarang = ', v6:1:0, ' volt');
+  writeln('Arus (I) yang mengalir sekarang = ', i4:4:2, ' Ampere');
+
+  writeln('==== b. Hambatan turun 10% ====');
+  {rumus}
+  r3 := r*persen;
+  r4 := r-r3;
+  i5 := v/r4;
+
+  writeln('Penurunan hambatan 10% = ', r3:1:0, ' ohm');
+  writeln('Hambatan sekarang = ', r4:1:0, ' ohm');
+  writeln('Arus (I) yang ditarik = ', i5:1:1, ' Ampere' );
+readln;
+
+end.
