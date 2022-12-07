@@ -1,0 +1,19 @@
+program Fisika_5;
+const 
+  p = 0.04;
+  A = 0.00005;
+  N = 200;
+  
+var 
+  l_udara, l_besi:real;
+  
+begin
+  writeln('a. Induksi Selenoid dengan rongga udara');
+  l_udara := SQR(N) * 0.0000004 * 3.14 * 0.00005 / 0.04;
+  writeln('Induktansi = ', l_udara);
+
+  writeln('b. Induksi Selenoid dengan besi');
+  l_besi := SQR(N) * 4000 * 0.0000004 * 3.14 * 0.00005 / 0.04;
+  writeln('Induktansi = ', l_besi);
+  
+end.
