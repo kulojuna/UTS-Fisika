@@ -1,0 +1,16 @@
+program menghitungkapasitor;
+const
+  C = 0.0000000075;
+  Q = 0.000000165;
+var 
+v:real;
+
+begin
+  writeln('==== Diketahui ====');
+  writeln('C = ', C);
+  writeln('Q = ', Q);
+  
+    writeln('==== Tegangan Kedua Ujung Kapasitor ====');
+    v:= Q / C;
+    writeln('Tegangan kedua ujung kapasitor = ',v:0:0, ' Volt');
+end.
